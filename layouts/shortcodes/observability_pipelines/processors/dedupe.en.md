@@ -15,8 +15,8 @@ To set up the deduplicate processor:
 ```json
 {
     "outer_key": {
-        "inner_key": "inner_value",
-        "a": {
+        "a": "inner_value",
+        "inner_key": {
             "double_inner_key": "double_inner_value",
             "b": "b value"
         },
