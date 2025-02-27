@@ -234396,6 +234396,7 @@
               "apm_read": "Read and query APM and Trace Analytics.",
               "apm_service_catalog_read": "View service catalog and service definitions.",
               "apm_service_catalog_write": "Add, modify, and delete service catalog definitions when those definitions are maintained by Datadog.",
+              "appsec_vm_read": "View infrastructure, application code, and library vulnerabilities. This does not restrict API or inventory SQL access to the vulnerability data source.",
               "cases_read": "View Cases.",
               "cases_write": "Create and update cases.",
               "ci_visibility_pipelines_write": "Create CI Visibility pipeline spans using the API.",
@@ -365672,6 +365673,11 @@
           {
             "apiKeyAuth": [],
             "appKeyAuth": []
+          },
+          {
+            "AuthZ": [
+              "appsec_vm_read"
+            ]
           }
         ],
         "summary": "List vulnerable assets",
@@ -365681,7 +365687,8 @@
         "x-menu-order": 26,
         "x-undo": {
           "type": "safe"
-        }
+        },
+        "x-unstable": "**Note**: This endpoint is a private preview.\nIf you are interested in accessing this API, [fill out this form](https://forms.gle/kMYC1sDr6WDUBDsx9)."
       }
     },
     "/api/v2/security/cloud_workload/policy/download": {
@@ -366239,6 +366246,11 @@
           {
             "apiKeyAuth": [],
             "appKeyAuth": []
+          },
+          {
+            "AuthZ": [
+              "appsec_vm_read"
+            ]
           }
         ],
         "summary": "Get SBOM",
@@ -366249,7 +366261,7 @@
         "x-undo": {
           "type": "safe"
         },
-        "x-unstable": "**Note**: This endpoint is a private preview.\nIf you are interested in accessing this API, please [fill out this form](https://forms.gle/kMYC1sDr6WDUBDsx9)."
+        "x-unstable": "**Note**: This endpoint is a private preview.\nIf you are interested in accessing this API, [fill out this form](https://forms.gle/kMYC1sDr6WDUBDsx9)."
       }
     },
     "/api/v2/security/signals/notification_rules": {
@@ -370003,6 +370015,11 @@
           {
             "apiKeyAuth": [],
             "appKeyAuth": []
+          },
+          {
+            "AuthZ": [
+              "appsec_vm_read"
+            ]
           }
         ],
         "summary": "List vulnerabilities",
@@ -370012,7 +370029,8 @@
         "x-menu-order": 25,
         "x-undo": {
           "type": "safe"
-        }
+        },
+        "x-unstable": "**Note**: This endpoint is a private preview.\nIf you are interested in accessing this API, [fill out this form](https://forms.gle/kMYC1sDr6WDUBDsx9)."
       }
     },
     "/api/v2/security/vulnerabilities/notification_rules": {
